@@ -1,0 +1,2 @@
+# st-chatu8_newapi_groke_image_adapter_server
+酒馆st-chatu8插件接入newapi反代grok生图请求格式转换中继服务器
