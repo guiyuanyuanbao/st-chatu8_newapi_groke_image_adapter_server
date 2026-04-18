@@ -1,0 +1,14 @@
+services:
+  relay-server:
+    image: ghcr.io/guiyuanyuanbao/st-chatu8_newapi_groke_image_adapter_server:latest
+    container_name: relay-server
+    restart: unless-stopped
+    ports:
+      - "3101:3101"
+    environment:
+      LISTEN_HOST: 0.0.0.0
+      LISTEN_PORT: 3101
+      UPSTREAM_HOST: 127.0.0.1   #上游服务器，一般填newapi的ip或域名，如果newapi和relay-server在同一台机器上
+      UPSTREAM_PORT: 3100
+      UPSTREAM_SCHEME: http
+      UPSTREAM_TIMEOUT: 60
